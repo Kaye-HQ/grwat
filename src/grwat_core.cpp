@@ -69,7 +69,8 @@ namespace grwat {
                                 const double& Qi,
                                 const double& Qi_1,
                                 const double& alpha = 0.925) {
-        return Qfi_1 * alpha + 0.5 * (Qi - Qi_1) * (1 + alpha);
+        return  Qi - (Qfi_1 * alpha + 0.5 * (Qi - Qi_1) * (1 + alpha));
+            # Qfi_1 * alpha + 0.5 * (Qi - Qi_1) * (1 + alpha);
     }
 
     static double baseflow_chapman(const double& Qfi_1,
